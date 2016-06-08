@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10117" systemVersion="15E65" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="6l5-jH-rww">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+    </dependencies>
+    <scenes>
+        <!--Test View Controller-->
+        <scene sceneID="jW1-US-whc">
+            <objects>
+                <viewController id="6l5-jH-rww" customClass="TestViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="reh-Vw-rwm"/>
+                        <viewControllerLayoutGuide type="bottom" id="eRY-ZC-egK"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="l33-iS-XNf">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3rp-Q5-qfX">
+                                <rect key="frame" x="130" y="20" width="112" height="30"/>
+                                <state key="normal" title="Connection Test"/>
+                                <connections>
+                                    <action selector="testConnectionButtonPressed:" destination="6l5-jH-rww" eventType="touchUpInside" id="7Rp-1y-erQ"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="59s-7i-Qsr">
+                                <rect key="frame" x="142" y="93" width="89" height="30"/>
+                                <state key="normal" title="Select Image"/>
+                                <connections>
+                                    <action selector="selectImageButtonPressed:" destination="6l5-jH-rww" eventType="touchUpInside" id="w5w-S5-wb5"/>
+                                </connections>
+                            </button>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="Im2-ST-3OT">
+                                <rect key="frame" x="66" y="162" width="488" height="243"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="243" id="OXW-Nb-FMu"/>
+                                </constraints>
+                            </imageView>
+                            <stackView opaque="NO" contentMode="scaleToFill" fixedFrame="YES" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="29f-wN-PVu">
+                                <rect key="frame" x="66" y="436" width="95" height="30"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1am-VN-P15">
+                                        <rect key="frame" x="0.0" y="0.0" width="95" height="30"/>
+                                        <state key="normal" title="Upload Image"/>
+                                        <connections>
+                                            <action selector="uploadImageButtonPressed:" destination="6l5-jH-rww" eventType="touchUpInside" id="Ac8-e0-JZm"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                            </stackView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Hello There" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vFt-cP-Zor">
+                                <rect key="frame" x="142" y="58" width="88" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="59s-7i-Qsr" firstAttribute="top" secondItem="vFt-cP-Zor" secondAttribute="bottom" constant="14" id="00h-So-M1p"/>
+                            <constraint firstItem="Im2-ST-3OT" firstAttribute="leading" secondItem="l33-iS-XNf" secondAttribute="leadingMargin" constant="46" id="GNM-LH-TqE"/>
+                            <constraint firstItem="59s-7i-Qsr" firstAttribute="leading" secondItem="vFt-cP-Zor" secondAttribute="leading" id="SVH-FY-rEA"/>
+                            <constraint firstItem="Im2-ST-3OT" firstAttribute="top" secondItem="59s-7i-Qsr" secondAttribute="bottom" constant="39" id="XUS-Mz-7Wl"/>
+                            <constraint firstItem="vFt-cP-Zor" firstAttribute="top" secondItem="3rp-Q5-qfX" secondAttribute="bottom" constant="8" symbolic="YES" id="ZM3-lU-lP3"/>
+                            <constraint firstItem="59s-7i-Qsr" firstAttribute="leading" secondItem="l33-iS-XNf" secondAttribute="leading" constant="142" id="kYN-kL-fNj"/>
+                            <constraint firstItem="59s-7i-Qsr" firstAttribute="centerX" secondItem="3rp-Q5-qfX" secondAttribute="centerX" id="ob7-cL-d2d"/>
+                            <constraint firstItem="Im2-ST-3OT" firstAttribute="top" secondItem="l33-iS-XNf" secondAttribute="top" constant="162" id="qmz-tv-PMJ"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="Im2-ST-3OT" secondAttribute="trailing" constant="26" id="t4U-Gr-Wbl"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="responseLabel" destination="vFt-cP-Zor" id="5bt-c3-jsY"/>
+                        <outlet property="selectedImageVIew" destination="Im2-ST-3OT" id="lNb-1x-jy5"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="YtZ-gy-k3L" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-75" y="198"/>
+        </scene>
+    </scenes>
+</document>
